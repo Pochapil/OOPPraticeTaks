@@ -1,4 +1,4 @@
-package point;
+package ru.ssau.tk.mggrndn.ooppractice.point;
 
 public class Points {
     private static double accuracy = 0.00005;

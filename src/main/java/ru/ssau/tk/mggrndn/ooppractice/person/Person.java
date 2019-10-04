@@ -1,4 +1,4 @@
-package person;
+package ru.ssau.tk.mggrndn.ooppractice.person;
 
 public class Person {
     private String firstName;

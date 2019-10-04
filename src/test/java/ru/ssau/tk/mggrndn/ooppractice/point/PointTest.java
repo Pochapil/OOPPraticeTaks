@@ -1,4 +1,4 @@
-package point;
+package ru.ssau.tk.mggrndn.ooppractice.point;
 
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package person;
+package ru.ssau.tk.mggrndn.ooppractice.person;
 
 import org.testng.annotations.Test;
 
@@ -6,9 +6,10 @@ import static org.testng.Assert.*;
 
 public class PersonTest {
     Person firstPerson = new Person();
-    Person secondPerson = new Person("Dima","Morozov",2322);
+    Person secondPerson = new Person("Dima", "Morozov", 2322);
     Person thirdPerson = new Person(3321);
     Person fourthPerson = new Person();
+
     @Test
     void setFirstName() {
         fourthPerson.setFirstName(null);
@@ -28,8 +29,8 @@ public class PersonTest {
 
     @Test
     void getFirstName() {
-        System.out.println("name:"+fourthPerson.getFirstName());
-        System.out.println("name:"+thirdPerson.getFirstName());
+        System.out.println("name:" + fourthPerson.getFirstName());
+        System.out.println("name:" + thirdPerson.getFirstName());
         System.out.println("name: " + secondPerson.getFirstName());
     }
 
