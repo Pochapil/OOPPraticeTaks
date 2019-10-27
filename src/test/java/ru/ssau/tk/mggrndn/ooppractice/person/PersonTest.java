@@ -14,6 +14,7 @@ public class PersonTest {
     void setFirstName() {
         fourthPerson.setFirstName(null);
         firstPerson.setFirstName("Bagration");
+        assertEquals(firstPerson.getFirstName(), "Bagration");
     }
 
     @Test
@@ -25,25 +26,26 @@ public class PersonTest {
     @Test
     void setPassportId() {
         thirdPerson.setPassportId(332);
+        assertEquals(thirdPerson.getPassportId(), 332);
     }
 
     @Test
     void getFirstName() {
-        System.out.println("name:" + fourthPerson.getFirstName());
-        System.out.println("name:" + thirdPerson.getFirstName());
-        System.out.println("name: " + secondPerson.getFirstName());
+        assertEquals(fourthPerson.getFirstName(), null);
+        assertEquals(thirdPerson.getFirstName(), null);
+        assertEquals(secondPerson.getFirstName(), "Dima");
     }
 
     @Test
     void getLastName() {
-        System.out.println("surname: " + fourthPerson.getLastName());
-        System.out.println("surname: " + thirdPerson.getLastName());
-        System.out.println("surname: " + secondPerson.getLastName());
+        assertEquals(fourthPerson.getLastName(), null);
+        assertEquals(thirdPerson.getLastName(), null);
+        assertEquals(secondPerson.getLastName(), "Morozov");
     }
 
     @Test
     void getPassportId() {
-        System.out.println("passportId: " + firstPerson.getPassportId());
-        System.out.println("passportId: " + thirdPerson.getPassportId());
+        assertEquals(firstPerson.getPassportId(), 0);
+        assertEquals(thirdPerson.getPassportId(), 3321);
     }
 }
