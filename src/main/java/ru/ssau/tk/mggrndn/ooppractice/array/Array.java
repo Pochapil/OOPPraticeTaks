@@ -140,4 +140,14 @@ public class Array {
             return array;
         }
     }
+
+    static int[] createArraySymmetric(int length) {
+        var array = new int[length];
+        int k = 1;
+        for (int i = 0; i < Math.ceil(( (double)length )/ 2 ); i++) {
+            array[i] = k++;
+            array[length-i-1]=array[i];
+        }
+        return array;
+    }
 }

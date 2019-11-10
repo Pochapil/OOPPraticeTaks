@@ -139,4 +139,13 @@ public class ArrayTest {
             System.out.println(array[i]);
         }
     }
+
+    @Test
+    public void testCreateArraySymmetric() {
+        length = 5;
+        var array = Array.createArraySymmetric(length);
+        for (int i = 0; i < array.length; i++) {
+            assertEquals(array[i], array[length - i - 1], 0.001);
+        }
+    }
 }
