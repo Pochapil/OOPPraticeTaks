@@ -126,28 +126,14 @@ public class Array {
         } else {
             int count = 0;
             for (int i = 2; i <= number; i++) {
-                int mark = 0;
-                for (int j = 2; j < i; j++) {
-                    if (i % j == 0) {
-                        mark = 1;
-                        break;
-                    }
-                }
-                if (mark == 0) {
+                if (Array.createArrayOfDividers(i).length == 2) {
                     count++;
                 }
             }
             var array = new int[count];
             int k = 0;
             for (int i = 2; i <= number; i++) {
-                int mark = 0;
-                for (int j = 2; j < i; j++) {
-                    if (i % j == 0) {
-                        mark = 1;
-                        break;
-                    }
-                }
-                if (mark == 0) {
+                if (Array.createArrayOfDividers(i).length == 2) {
                     array[k++] = i;
                 }
             }
