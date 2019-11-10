@@ -105,28 +105,38 @@ public class ArrayTest {
 
     @Test
     public void testCreateArrayArithmeticProgression() {
-        var array=Array.createArrayArithmeticProgression(length,1,2);
-        assertEquals(array[0],1,0.0001);
-        for(int i=1;i<length;i++){
-            assertEquals(array[i]-array[i-1],2,0.0001);
+        var array = Array.createArrayArithmeticProgression(length, 1, 2);
+        assertEquals(array[0], 1, 0.0001);
+        for (int i = 1; i < length; i++) {
+            assertEquals(array[i] - array[i - 1], 2, 0.0001);
         }
     }
 
     @Test
     public void testCreateArrayGeometricProgression() {
-        var array=Array.createArrayGeometricProgression(length,1,2);
-        assertEquals(array[0],1,0.0001);
-        for(int i=1;i<length;i++){
-            assertEquals(array[i]/array[i-1],2,0.0001);
+        var array = Array.createArrayGeometricProgression(length, 1, 2);
+        assertEquals(array[0], 1, 0.0001);
+        for (int i = 1; i < length; i++) {
+            assertEquals(array[i] / array[i - 1], 2, 0.0001);
         }
     }
 
     @Test
     public void testCreateArrayOfDividers() {
-        int number=555;
+        int number = 555;
         var array = Array.createArrayOfDividers(number);
         for (int i = 0; i < array.length; i++) {
-            assertEquals(number % array[i], 0,0.001);
+            assertEquals(number % array[i], 0, 0.001);
+        }
+    }
+
+    @Test
+    public void testCreateArrayPrimeNumbers() {
+        int number = 97;
+        var array = Array.createArrayPrimeNumbers(97);
+        for (int i = 0; i < array.length; i++) {
+            assertEquals(Array.createArrayOfDividers(array[i]).length, 2, 0.0001);
+            System.out.println(array[i]);
         }
     }
 }

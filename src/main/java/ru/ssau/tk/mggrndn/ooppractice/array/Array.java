@@ -109,15 +109,49 @@ public class Array {
                 j++;
             }
         }
-        var array = new int[2*j];
+        var array = new int[2 * j];
         int k = 1;
         for (int i = 0; i < j; k++) {
             if (number % k == 0) {
                 array[i++] = k;
-                array[2*j-i]=number/k;
+                array[2 * j - i] = number / k;
             }
         }
         return array;
     }
 
+    static int[] createArrayPrimeNumbers(int number) {
+        if (number < 2) {
+            return new int[0];
+        } else {
+            int count = 0;
+            for (int i = 2; i <= number; i++) {
+                int mark = 0;
+                for (int j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        mark = 1;
+                        break;
+                    }
+                }
+                if (mark == 0) {
+                    count++;
+                }
+            }
+            var array = new int[count];
+            int k = 0;
+            for (int i = 2; i <= number; i++) {
+                int mark = 0;
+                for (int j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        mark = 1;
+                        break;
+                    }
+                }
+                if (mark == 0) {
+                    array[k++] = i;
+                }
+            }
+            return array;
+        }
+    }
 }
