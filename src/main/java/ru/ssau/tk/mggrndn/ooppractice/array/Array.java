@@ -84,4 +84,40 @@ public class Array {
         }
         return array;
     }
+
+    static double[] createArrayArithmeticProgression(int length, double first, double step) {
+        var array = new double[length];
+        for (int i = 0; i < length; i++) {
+            array[i] = first + step * i;
+        }
+        return array;
+    }
+
+    static double[] createArrayGeometricProgression(int length, double first, double step) {
+        var array = new double[length];
+        array[0] = first;
+        for (int i = 1; i < length; i++) {
+            array[i] = array[i - 1] * step;
+        }
+        return array;
+    }
+
+    static int[] createArrayOfDividers(int number) {
+        int j = 0;
+        for (int i = 1; i < Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                j++;
+            }
+        }
+        var array = new int[2*j];
+        int k = 1;
+        for (int i = 0; i < j; k++) {
+            if (number % k == 0) {
+                array[i++] = k;
+                array[2*j-i]=number/k;
+            }
+        }
+        return array;
+    }
+
 }

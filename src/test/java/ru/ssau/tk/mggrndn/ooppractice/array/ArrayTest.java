@@ -102,4 +102,31 @@ public class ArrayTest {
             assertTrue(array[i] % 3 != 0);
         }
     }
+
+    @Test
+    public void testCreateArrayArithmeticProgression() {
+        var array=Array.createArrayArithmeticProgression(length,1,2);
+        assertEquals(array[0],1,0.0001);
+        for(int i=1;i<length;i++){
+            assertEquals(array[i]-array[i-1],2,0.0001);
+        }
+    }
+
+    @Test
+    public void testCreateArrayGeometricProgression() {
+        var array=Array.createArrayGeometricProgression(length,1,2);
+        assertEquals(array[0],1,0.0001);
+        for(int i=1;i<length;i++){
+            assertEquals(array[i]/array[i-1],2,0.0001);
+        }
+    }
+
+    @Test
+    public void testCreateArrayOfDividers() {
+        int number=555;
+        var array = Array.createArrayOfDividers(number);
+        for (int i = 0; i < array.length; i++) {
+            assertEquals(number % array[i], 0,0.001);
+        }
+    }
 }
