@@ -52,4 +52,36 @@ public class Array {
         }
         return array;
     }
+
+    static double[] createArraySquareEquation(double a, double b, double c) {
+        if (a == 0) {
+            if (b == 0) {
+                return new double[0];
+            } else {
+                return new double[]{-c / b};
+            }
+        } else {
+            double d = b * b - 4 * a * c;
+            if (d > 0) {
+                d = Math.sqrt(d);
+                return new double[]{(-1 * b + d) / (2 * a), (-1 * b - d) / (2 * a)};
+            } else if (d == 0) {
+                return new double[]{-b / (2 * a)};
+            } else {
+                return new double[0];
+            }
+        }
+    }
+
+    static int[] createArrayNotDivisibleByThree(int length) {
+        var array = new int[length];
+        int j = 1;
+        for (int i = 0; i < length; i++) {
+            if (j % 3 == 0) {
+                j++;
+            }
+            array[i] = j++;
+        }
+        return array;
+    }
 }
