@@ -48,4 +48,20 @@ public class PersonTest {
         assertEquals(firstPerson.getPassportId(), 0);
         assertEquals(thirdPerson.getPassportId(), 3321);
     }
+
+    @Test
+    public void testSetGender() {
+        firstPerson.setGender(Gender.MALE);
+        assertEquals(firstPerson.getGender(),Gender.MALE);
+        secondPerson.setGender(Gender.FEMALE);
+        assertEquals(secondPerson.getGender(),Gender.FEMALE);
+    }
+
+    @Test
+    public void testGetGender() {
+        thirdPerson.setGender(Gender.MALE);
+        assertEquals(thirdPerson.getGender(),Gender.MALE);
+        fourthPerson.setGender(Gender.FEMALE);
+        assertEquals(fourthPerson.getGender(),Gender.FEMALE);
+    }
 }

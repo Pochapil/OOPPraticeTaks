@@ -4,6 +4,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private int passportId;
+    private Gender gender;
 
     Person() {
     }
@@ -45,5 +46,13 @@ public class Person {
 
     int getPassportId() {
         return passportId;
+    }
+
+    void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    Gender getGender() {
+        return gender;
     }
 }
