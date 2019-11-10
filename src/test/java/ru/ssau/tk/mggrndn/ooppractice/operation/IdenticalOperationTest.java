@@ -14,4 +14,12 @@ public class IdenticalOperationTest {
         assertEquals(func.apply(Double.POSITIVE_INFINITY),Double.POSITIVE_INFINITY,0.0001);
         assertEquals(func.apply(Double.NaN),Double.NaN,0.0001);
     }
+    @Test
+    public void testApplyTriple() {
+        assertEquals(func.applyTriple(0),0,0.0001);
+        assertEquals(func.applyTriple(4),4,0.0001);
+        assertEquals(func.applyTriple(Double.NEGATIVE_INFINITY),Double.NEGATIVE_INFINITY,0.0001);
+        assertEquals(func.applyTriple(Double.POSITIVE_INFINITY),Double.POSITIVE_INFINITY,0.0001);
+        assertEquals(func.applyTriple(Double.NaN),Double.NaN,0.0001);
+    }
 }
