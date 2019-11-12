@@ -144,10 +144,32 @@ public class Array {
     static int[] createArraySymmetric(int length) {
         var array = new int[length];
         int k = 1;
-        for (int i = 0; i < Math.ceil(( (double)length )/ 2 ); i++) {
+        for (int i = 0; i < Math.ceil(((double) length) / 2); i++) {
             array[i] = k++;
-            array[length-i-1]=array[i];
+            array[length - i - 1] = array[i];
         }
         return array;
     }
+
+    static void createArrayNegate(Number[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array instanceof Integer[]) {
+                array[i] = -((Integer) array[i]);
+            }
+            if (array instanceof Double[]) {
+                array[i] = -((Double) array[i]);
+            }
+        }
+    }
+
+    static boolean isArrayContains(Number[] array, Number number) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(number)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }

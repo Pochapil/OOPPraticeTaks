@@ -148,4 +148,29 @@ public class ArrayTest {
             assertEquals(array[i], array[length - i - 1], 0.001);
         }
     }
+
+    @Test
+    public void testCreateArrayNegate() {
+        Double[] arrayDouble = new Double[]{2.3, 1.2, 4.5, 6.5};
+        Integer[] arrayInt = new Integer[]{1, 2, 3, 4, 5};
+        var arrayIntOrigin = new Integer[]{1, 2, 3, 4, 5};
+        var arrayDoubleOrigin = new Double[]{2.3, 1.2, 4.5, 6.5};
+        Array.createArrayNegate(arrayDouble);
+        Array.createArrayNegate(arrayInt);
+        for (int i = 0; i < arrayInt.length; i++) {
+            assertEquals(arrayInt[i], -arrayIntOrigin[i], 0.001);
+        }
+        for (int i = 0; i < arrayDouble.length; i++) {
+            assertEquals(arrayDouble[i], -arrayDoubleOrigin[i], 0.001);
+        }
+    }
+
+    @Test
+    public void testIsArrayContains() {
+        Number[] array = new Number[]{1, 2, 3, 4.5};
+        assertTrue(Array.isArrayContains(array, 4.5));
+        assertTrue(Array.isArrayContains(array, 1));
+        assertTrue(Array.isArrayContains(array, 2));
+        assertFalse(Array.isArrayContains(array, 0));
+    }
 }
