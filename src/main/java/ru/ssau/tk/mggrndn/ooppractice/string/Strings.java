@@ -56,6 +56,14 @@ public class Strings {
         }
     }
 
-
+    static int firstContainIndexInSecondHalf(String first, String second) {
+        if (first.contains(second)) {
+            return first.indexOf(second, first.length() / 2);
+        } else if (second.contains(first)) {
+            return second.indexOf(first, second.length() / 2);
+        } else {
+            return -1;
+        }
+    }
 
 }

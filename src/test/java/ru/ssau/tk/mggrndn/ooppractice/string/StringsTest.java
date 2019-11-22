@@ -46,4 +46,11 @@ public class StringsTest {
         assertEquals(Strings.firstContainIndex("abc", "de"), -1, 0.0001);
         assertEquals(Strings.firstContainIndex("abcdeabcdEf", "abcdE"), 5, 0.0001);
     }
+
+    @Test
+    public void testFirstContainIndexInSecondHalf() {
+        assertEquals(Strings.firstContainIndexInSecondHalf("abcdabc", "abc"), 4, 0.0001);
+        assertEquals(Strings.firstContainIndexInSecondHalf("abcddabc", "abc"), 5, 0.0001);
+        assertEquals(Strings.firstContainIndexInSecondHalf("abcdabcabc", "abc"), 7, 0.0001);
+    }
 }
