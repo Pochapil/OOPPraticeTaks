@@ -51,6 +51,14 @@ public class StringsTest {
     public void testFirstContainIndexInSecondHalf() {
         assertEquals(Strings.firstContainIndexInSecondHalf("abcdabc", "abc"), 4, 0.0001);
         assertEquals(Strings.firstContainIndexInSecondHalf("abcddabc", "abc"), 5, 0.0001);
-        assertEquals(Strings.firstContainIndexInSecondHalf("abcdabcabc", "abc"), 7, 0.0001);
+        assertEquals(Strings.firstContainIndexInSecondHalf("abcdabcabc", "ab"), 7, 0.0001);
+    }
+
+    @Test
+    public void testLastContainIndexInFirstHalf() {
+        assertEquals(Strings.lastContainIndexInFirstHalf("abcdabc", "abc"), 0, 0.0001);
+        assertEquals(Strings.lastContainIndexInFirstHalf("abcddabc", "abc"), 0, 0.0001);
+        assertEquals(Strings.lastContainIndexInFirstHalf("abcabdbabcabc", "ab"), 3, 0.0001);
+        assertEquals(Strings.lastContainIndexInFirstHalf("cabccabccccccc", "ab"), 5, 0.0001);
     }
 }

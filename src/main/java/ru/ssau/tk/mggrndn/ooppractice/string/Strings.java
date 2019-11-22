@@ -66,4 +66,14 @@ public class Strings {
         }
     }
 
+    static int lastContainIndexInFirstHalf(String first, String second) {
+        if (first.contains(second)) {
+            return first.lastIndexOf(second, first.length() / 2);
+        } else if (second.contains(first)) {
+            return second.lastIndexOf(first, second.length() / 2);
+        } else {
+            return -1;
+        }
+    }
+
 }
