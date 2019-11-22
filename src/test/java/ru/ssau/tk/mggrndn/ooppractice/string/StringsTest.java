@@ -79,4 +79,12 @@ public class StringsTest {
         assertEquals(Strings.replacedString("abcbc", "bc", "aa"),"aaaaa");
         assertEquals(Strings.replacedString("ороророро", "оро", "ро"),"роррро");
     }
+
+    @Test
+    public void testGetSubstring() {
+        assertEquals(Strings.getSubString("abc",0,2),"ab");
+        assertEquals(Strings.getSubString("abcde",2,4),"cd");
+        assertEquals(Strings.getSubString("abc",-1,100),"abc");
+        assertEquals(Strings.getSubString("abc",3,2),"");
+    }
 }

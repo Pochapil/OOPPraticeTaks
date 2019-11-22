@@ -107,4 +107,17 @@ public class Strings {
         return source;
     }
 
+    static String getSubString(String source,int from,int to){
+        if(to<=from){
+            return "";
+        }
+        else if(from<0){
+            from=0;
+        }
+        if(to>source.length()){
+            to=source.length();
+        }
+        return source.substring(from,to);
+    }
+
 }
