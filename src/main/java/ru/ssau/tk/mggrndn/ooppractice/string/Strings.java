@@ -86,4 +86,25 @@ public class Strings {
         return k;
     }
 
+    static int stringsStartsEndsWithIgnoreSpace(String[] strings, String prefix, String suffix){
+        int k = 0;
+        for (int i = 0; i < strings.length; i++) {
+            if (strings[i].trim().startsWith(prefix) && strings[i].trim().endsWith(suffix)) {
+                k++;
+            }
+        }
+        return k;
+    }
+
+    static String replacedString(String source,String replaced,String replacement){
+        for(int i=0;i<100;i++)
+        if(source.contains(replaced)){
+            source=source.replaceAll(replaced,replacement);
+        }
+        else{
+            break;
+        }
+        return source;
+    }
+
 }

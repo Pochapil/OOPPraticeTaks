@@ -69,4 +69,14 @@ public class StringsTest {
     }
 
 
+    @Test
+    public void testStringsStartsEndsWithIgnoreSpace() {
+        assertEquals(Strings.stringsStartsEndsWithIgnoreSpace(new String[]{"  abcde  ", "  abbde", "  abbde", "  abfde  "}, "ab", "de"), 4, 0.001);
+    }
+
+    @Test
+    public void testReplacedString() {
+        assertEquals(Strings.replacedString("abcbc", "bc", "aa"),"aaaaa");
+        assertEquals(Strings.replacedString("ороророро", "оро", "ро"),"роррро");
+    }
 }
