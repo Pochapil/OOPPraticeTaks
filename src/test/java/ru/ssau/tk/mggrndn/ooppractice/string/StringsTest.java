@@ -61,4 +61,12 @@ public class StringsTest {
         assertEquals(Strings.lastContainIndexInFirstHalf("abcabdbabcabc", "ab"), 3, 0.0001);
         assertEquals(Strings.lastContainIndexInFirstHalf("cabccabccccccc", "ab"), 5, 0.0001);
     }
+
+    @Test
+    public void testStringsStartsEndsWith() {
+        assertEquals(Strings.stringsStartsEndsWith(new String[]{"abcde", "abbde", "abbde", "abfde"}, "ab", "de"), 4, 0.001);
+        assertEquals(Strings.stringsStartsEndsWith(new String[]{"abcde", "abbde", "abbe", "abfe"}, "ab", "de"), 2, 0.001);
+    }
+
+
 }

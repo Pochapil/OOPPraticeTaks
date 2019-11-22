@@ -76,4 +76,14 @@ public class Strings {
         }
     }
 
+    static int stringsStartsEndsWith(String[] strings, String prefix, String suffix) {
+        int k = 0;
+        for (int i = 0; i < strings.length; i++) {
+            if (strings[i].startsWith(prefix) && strings[i].endsWith(suffix)) {
+                k++;
+            }
+        }
+        return k;
+    }
+
 }
