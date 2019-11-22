@@ -48,32 +48,14 @@ public class Strings {
 
     static int firstContainIndex(String first, String second) {
         if (first.contains(second)) {
-            for (int i = 0; i < first.length(); i++) {
-                for (int j = 0; j < second.length(); j++) {
-                    if (first.charAt(i + j) != second.charAt(j)) {
-                        break;
-                    }
-                    if (j == second.length() - 1) {
-                        return i;
-                    }
-                }
-            }
+            return first.indexOf(second);
         } else if (second.contains(first)) {
-            for (int i = 0; i < second.length(); i++) {
-                for (int j = 0; j < first.length(); j++) {
-                    if (second.charAt(i + j) != first.charAt(j)) {
-                        break;
-                    }
-                    if (j == first.length() - 1) {
-                        return i;
-                    }
-                }
-            }
+            return second.indexOf(first);
         } else {
             return -1;
         }
-        return -1;
     }
+
 
 
 }
