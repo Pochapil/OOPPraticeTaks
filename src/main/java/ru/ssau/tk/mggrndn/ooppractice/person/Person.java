@@ -55,4 +55,9 @@ public class Person {
     Gender getGender() {
         return gender;
     }
+
+    @Override
+    public String toString() {
+        return this.firstName + " " + this.lastName;
+    }
 }

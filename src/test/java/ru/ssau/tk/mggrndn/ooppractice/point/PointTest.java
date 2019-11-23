@@ -15,4 +15,10 @@ public class PointTest {
         System.out.println(firstPoint.x);
         assertEquals(thirdPoint.length(), Math.sqrt(9.9 * 9.9 + 3 * 3 + 3.0 * 3.0), 0.001);
     }
+
+    @Test
+    public void testTestToString() {
+        assertEquals(firstPoint.toString(), "[1.0, 2.0, 3.0]");
+        assertEquals(secondPoint.toString(), "[1.2, 2.1, 3.9]");
+    }
 }

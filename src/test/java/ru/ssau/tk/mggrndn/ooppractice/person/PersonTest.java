@@ -52,16 +52,22 @@ public class PersonTest {
     @Test
     public void testSetGender() {
         firstPerson.setGender(Gender.MALE);
-        assertEquals(firstPerson.getGender(),Gender.MALE);
+        assertEquals(firstPerson.getGender(), Gender.MALE);
         secondPerson.setGender(Gender.FEMALE);
-        assertEquals(secondPerson.getGender(),Gender.FEMALE);
+        assertEquals(secondPerson.getGender(), Gender.FEMALE);
     }
 
     @Test
     public void testGetGender() {
         thirdPerson.setGender(Gender.MALE);
-        assertEquals(thirdPerson.getGender(),Gender.MALE);
+        assertEquals(thirdPerson.getGender(), Gender.MALE);
         fourthPerson.setGender(Gender.FEMALE);
-        assertEquals(fourthPerson.getGender(),Gender.FEMALE);
+        assertEquals(fourthPerson.getGender(), Gender.FEMALE);
+    }
+
+    @Test
+    public void testTestToString() {
+        assertEquals(secondPerson.toString(), "Dima Morozov");
+        assertEquals(new Person("Danil", "Polevoi").toString(), "Danil Polevoi");
     }
 }
