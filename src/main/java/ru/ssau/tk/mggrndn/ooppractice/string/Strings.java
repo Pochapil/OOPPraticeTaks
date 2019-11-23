@@ -1,5 +1,8 @@
 package ru.ssau.tk.mggrndn.ooppractice.string;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+
 public class Strings {
 
     static public void main(String[] args) {
@@ -86,7 +89,7 @@ public class Strings {
         return k;
     }
 
-    static int stringsStartsEndsWithIgnoreSpace(String[] strings, String prefix, String suffix){
+    static int stringsStartsEndsWithIgnoreSpace(String[] strings, String prefix, String suffix) {
         int k = 0;
         for (int i = 0; i < strings.length; i++) {
             if (strings[i].trim().startsWith(prefix) && strings[i].trim().endsWith(suffix)) {
@@ -96,28 +99,42 @@ public class Strings {
         return k;
     }
 
-    static String replacedString(String source,String replaced,String replacement){
-        for(int i=0;i<100;i++)
-        if(source.contains(replaced)){
-            source=source.replaceAll(replaced,replacement);
-        }
-        else{
-            break;
-        }
+    static String replacedString(String source, String replaced, String replacement) {
+        for (int i = 0; i < 100; i++)
+            if (source.contains(replaced)) {
+                source = source.replaceAll(replaced, replacement);
+            } else {
+                break;
+            }
         return source;
     }
 
-    static String getSubString(String source,int from,int to){
-        if(to<=from){
+    static String getSubString(String source, int from, int to) {
+        if (to <= from) {
             return "";
+        } else if (from < 0) {
+            from = 0;
         }
-        else if(from<0){
-            from=0;
+        if (to > source.length()) {
+            to = source.length();
         }
-        if(to>source.length()){
-            to=source.length();
+        return source.substring(from, to);
+    }
+
+    static String[] getSingleWords(String source) {
+        String buff;
+        String[] words = source.split(" ");
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].length() > 0) {
+                if (Character.isLetter(words[i].charAt(0))) {
+                    buff = words[i].toUpperCase();
+                    for (int j = 1; j < words[i].length(); j++) {
+                        words[i] = "" + buff.charAt(0) + words[i].charAt(j);
+                    }
+                }
+            }
         }
-        return source.substring(from,to);
+        return words;
     }
 
 }

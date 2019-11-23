@@ -76,15 +76,23 @@ public class StringsTest {
 
     @Test
     public void testReplacedString() {
-        assertEquals(Strings.replacedString("abcbc", "bc", "aa"),"aaaaa");
-        assertEquals(Strings.replacedString("ороророро", "оро", "ро"),"роррро");
+        assertEquals(Strings.replacedString("abcbc", "bc", "aa"), "aaaaa");
+        assertEquals(Strings.replacedString("ороророро", "оро", "ро"), "роррро");
     }
 
     @Test
     public void testGetSubstring() {
-        assertEquals(Strings.getSubString("abc",0,2),"ab");
-        assertEquals(Strings.getSubString("abcde",2,4),"cd");
-        assertEquals(Strings.getSubString("abc",-1,100),"abc");
-        assertEquals(Strings.getSubString("abc",3,2),"");
+        assertEquals(Strings.getSubString("abc", 0, 2), "ab");
+        assertEquals(Strings.getSubString("abcde", 2, 4), "cd");
+        assertEquals(Strings.getSubString("abc", -1, 100), "abc");
+        assertEquals(Strings.getSubString("abc", 3, 2), "");
+    }
+
+    @Test
+    public void testGetSingleWords() {
+        assertEquals(Strings.getSingleWords("abc de fg h  i")[1], "De");
+        assertEquals(Strings.getSingleWords("abc de fg h  i")[2], "Fg");
+        assertEquals(Strings.getSingleWords("abc de fg h  i")[4], "");
+        assertEquals(Strings.getSingleWords("abc de fg h 1 i")[4], "1");
     }
 }
