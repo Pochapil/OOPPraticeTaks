@@ -142,11 +142,26 @@ public class Strings {
     }
 
     static String buildStringEveryEvenCharToIndex(String source) {
+        if (source == null) {
+            return null;
+        }
         StringBuilder builder = new StringBuilder(source);
         for (int i = 0; i < source.length(); i++) {
             if (i % 2 == 0) {
-                builder.replace(i, i+1, Integer.toString(i));
+                builder.replace(i, i + 1, Integer.toString(i));
             }
+        }
+        return builder.toString();
+    }
+
+    static String buildSequenceInts(int to) {
+        if (to <= 0) {
+            return "";
+        }
+        StringBuilder builder = new StringBuilder();
+        builder.append(0);
+        for (int i = 1; i < to; i++) {
+            builder.append(" ").append(i);
         }
         return builder.toString();
     }

@@ -106,7 +106,15 @@ public class StringsTest {
 
     @Test
     public void testBuildStringEveryEvenCharToIndex() {
-        assertEquals(Strings.buildStringEveryEvenCharToIndex("abcd"),"0b2d");
-        assertEquals(Strings.buildStringEveryEvenCharToIndex("abdeggeqwqe"),"0b2e4g6q8q10");
+        assertEquals(Strings.buildStringEveryEvenCharToIndex("abcd"), "0b2d");
+        assertEquals(Strings.buildStringEveryEvenCharToIndex("abdeggeqwqe"), "0b2e4g6q8q10");
+        assertEquals(Strings.buildStringEveryEvenCharToIndex(null), null);
+    }
+
+    @Test
+    public void testBuildSequenceInts() {
+        assertEquals(Strings.buildSequenceInts(10), "0 1 2 3 4 5 6 7 8 9");
+        assertEquals(Strings.buildSequenceInts(-1), "");
+        System.out.println(Strings.buildSequenceInts(10000));
     }
 }
