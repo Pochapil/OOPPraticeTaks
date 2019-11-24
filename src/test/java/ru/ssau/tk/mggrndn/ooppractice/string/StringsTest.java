@@ -117,4 +117,9 @@ public class StringsTest {
         assertEquals(Strings.buildSequenceInts(-1), "");
         System.out.println(Strings.buildSequenceInts(10000));
     }
+
+    @Test
+    public void testBuildStringWithNewCode() {
+        System.out.println(Strings.buildStringWithNewCode("abzABZ01239"));
+    }
 }

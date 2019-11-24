@@ -1,5 +1,7 @@
 package ru.ssau.tk.mggrndn.ooppractice.string;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -14,6 +16,7 @@ public class Strings {
         System.out.println("Символ\'№" + ++i);
         System.out.println("Символ\"№" + ++i);
         System.out.println("Символ\\№" + ++i);
+        System.out.println(java.nio.charset.Charset.defaultCharset());
     }
 
     static public void charsAtLine(String string) {
@@ -164,6 +167,11 @@ public class Strings {
             builder.append(" ").append(i);
         }
         return builder.toString();
+    }
+
+    static String buildStringWithNewCode(String source) {
+        byte[] byteString = source.getBytes(Charset.defaultCharset());
+        return new String(byteString, StandardCharsets.UTF_16);
     }
 
 }
