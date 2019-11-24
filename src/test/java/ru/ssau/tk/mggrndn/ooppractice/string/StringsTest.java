@@ -95,4 +95,12 @@ public class StringsTest {
         assertEquals(Strings.getSingleWords("abc de fg h  i")[4], "");
         assertEquals(Strings.getSingleWords("abc de fg h 1 i")[4], "1");
     }
+
+    @Test
+    public void testBuildString() {
+        assertEquals(Strings.buildString(new String[]{"ab", "ac"}), "ab, ac");
+        assertEquals(Strings.buildString(new String[]{"ab", "ac", ""}), "ab, ac, ");
+        assertEquals(Strings.buildString(new String[]{}), "");
+        assertEquals(Strings.buildString(new String[]{null, "ab"}), "null, ab");
+    }
 }

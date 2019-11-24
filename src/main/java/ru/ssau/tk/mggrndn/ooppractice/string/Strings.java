@@ -137,4 +137,9 @@ public class Strings {
         return words;
     }
 
+    static String buildString(String[] subStrings) {
+        return String.join(", ", subStrings);
+    }
+
+
 }
