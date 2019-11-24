@@ -180,7 +180,7 @@ public class Array {
         return false;
     }
 
-    static int numberOfEvens(Number[] array) {
+    static int countOfEvens(Number[] array) {
         int i = 0;
         for (Number number : array) {
             if (number instanceof Integer && (int) number % 2 == 0) {
@@ -188,6 +188,19 @@ public class Array {
             }
         }
         return i;
+    }
+
+    static Integer maxOfArray(Integer[] array) {
+        if (array.length == 0) {
+            return null;
+        }
+        Integer max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
     }
 
 }
