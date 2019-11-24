@@ -173,4 +173,11 @@ public class ArrayTest {
         assertTrue(Array.isArrayContains(array, 2));
         assertFalse(Array.isArrayContains(array, 0));
     }
+
+    @Test
+    public void testIsArrayContainsNull() {
+        assertTrue(Array.isArrayContainsNull(new Integer[]{1, 2, 3, 4, null}));
+        assertFalse(Array.isArrayContainsNull(new Integer[]{1, 2, 3, 4}));
+    }
+
 }

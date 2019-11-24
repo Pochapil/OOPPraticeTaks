@@ -171,5 +171,13 @@ public class Array {
         return false;
     }
 
+    static boolean isArrayContainsNull(Integer[] array) {
+        for (Integer number : array) {
+            if (number == null) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
