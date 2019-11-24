@@ -141,5 +141,14 @@ public class Strings {
         return String.join(", ", subStrings);
     }
 
+    static String buildStringEveryEvenCharToIndex(String source) {
+        StringBuilder builder = new StringBuilder(source);
+        for (int i = 0; i < source.length(); i++) {
+            if (i % 2 == 0) {
+                builder.replace(i, i+1, Integer.toString(i));
+            }
+        }
+        return builder.toString();
+    }
 
 }

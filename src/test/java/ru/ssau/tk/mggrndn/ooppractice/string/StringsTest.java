@@ -103,4 +103,10 @@ public class StringsTest {
         assertEquals(Strings.buildString(new String[]{}), "");
         assertEquals(Strings.buildString(new String[]{null, "ab"}), "null, ab");
     }
+
+    @Test
+    public void testBuildStringEveryEvenCharToIndex() {
+        assertEquals(Strings.buildStringEveryEvenCharToIndex("abcd"),"0b2d");
+        assertEquals(Strings.buildStringEveryEvenCharToIndex("abdeggeqwqe"),"0b2e4g6q8q10");
+    }
 }
