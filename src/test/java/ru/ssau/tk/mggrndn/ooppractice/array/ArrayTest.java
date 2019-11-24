@@ -180,4 +180,11 @@ public class ArrayTest {
         assertFalse(Array.isArrayContainsNull(new Integer[]{1, 2, 3, 4}));
     }
 
+    @Test
+    public void testNumberOfEvens() {
+        assertEquals(Array.numberOfEvens(new Number[]{1, 2, 3.2, 4, 5, 6.3}), 2, 0.0001);
+        assertEquals(Array.numberOfEvens(new Number[]{1, 2, 3.2, 3, 5, 6.3}), 1, 0.0001);
+        assertEquals(Array.numberOfEvens(new Number[]{1, 3, 3.2, 3, 5, 6.3}), 0, 0.0001);
+    }
+
 }

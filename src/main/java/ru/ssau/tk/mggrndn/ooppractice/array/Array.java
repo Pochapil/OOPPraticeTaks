@@ -180,4 +180,14 @@ public class Array {
         return false;
     }
 
+    static int numberOfEvens(Number[] array) {
+        int i = 0;
+        for (Number number : array) {
+            if (number instanceof Integer && (int) number % 2 == 0) {
+                i++;
+            }
+        }
+        return i;
+    }
+
 }
