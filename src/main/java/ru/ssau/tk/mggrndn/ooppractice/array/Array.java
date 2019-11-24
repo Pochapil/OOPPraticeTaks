@@ -203,4 +203,15 @@ public class Array {
         return max;
     }
 
+    static double getSumWithEvenIndex(Number[] array) {
+        double sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] instanceof Integer && i % 2 == 0) {
+                sum = sum + ((int) array[i]);
+            } else if (array[i] instanceof Double && i % 2 == 0) {
+                sum = sum + ((double) array[i]);
+            }
+        }
+        return sum;
+    }
 }

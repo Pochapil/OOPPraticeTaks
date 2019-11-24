@@ -193,4 +193,10 @@ public class ArrayTest {
         assertNull(Array.maxOfArray(new Integer[]{}));
         assertEquals(Array.maxOfArray(new Integer[]{10, 2, 3, 4, 5}), (Integer) 10);
     }
+
+    @Test
+    public void testGetSumWithEvenIndex() {
+        assertEquals(Array.getSumWithEvenIndex(new Number[]{1, 2.3, 3, 4, 2.3, 5}), 1 + 3 + 2.3, 0.0001);
+        assertEquals(Array.getSumWithEvenIndex(new Number[]{}), 0, 0.0001);
+    }
 }
