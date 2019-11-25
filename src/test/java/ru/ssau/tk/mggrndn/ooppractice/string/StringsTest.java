@@ -90,6 +90,7 @@ public class StringsTest {
 
     @Test
     public void testGetSingleWords() {
+        assertEquals(Strings.getSingleWords("abc de fg h  i")[0], "Abc");
         assertEquals(Strings.getSingleWords("abc de fg h  i")[1], "De");
         assertEquals(Strings.getSingleWords("abc de fg h  i")[2], "Fg");
         assertEquals(Strings.getSingleWords("abc de fg h  i")[4], "");

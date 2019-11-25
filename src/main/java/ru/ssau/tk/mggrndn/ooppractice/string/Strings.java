@@ -127,12 +127,15 @@ public class Strings {
     static String[] getSingleWords(String source) {
         String buff;
         String[] words = source.split(" ");
+        String copy;
         for (int i = 0; i < words.length; i++) {
             if (words[i].length() > 0) {
                 if (Character.isLetter(words[i].charAt(0))) {
                     buff = words[i].toUpperCase();
-                    for (int j = 1; j < words[i].length(); j++) {
-                        words[i] = "" + buff.charAt(0) + words[i].charAt(j);
+                    copy = words[i];
+                    words[i] = "" + buff.charAt(0);
+                    for (int j = 1; j < copy.length(); j++) {
+                        words[i] = words[i] + copy.charAt(j);
                     }
                 }
             }
