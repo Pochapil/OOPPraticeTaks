@@ -177,4 +177,8 @@ public class Strings {
         return new String(byteString, StandardCharsets.UTF_16);
     }
 
+    static void describeObject(Object object) {
+        System.out.println("Описание объекта: " + object);
+    }
+
 }

@@ -1,6 +1,7 @@
 package ru.ssau.tk.mggrndn.ooppractice.string;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.mggrndn.ooppractice.point.Point;
 
 import static org.testng.Assert.*;
 
@@ -122,5 +123,11 @@ public class StringsTest {
     @Test
     public void testBuildStringWithNewCode() {
         System.out.println(Strings.buildStringWithNewCode("abzABZ01239"));
+    }
+
+    @Test
+    public void testDescribeObject() {
+        Strings.describeObject("Str");
+        Strings.describeObject(new Point(1, 2, 3));
     }
 }
