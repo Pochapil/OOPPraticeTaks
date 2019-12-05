@@ -214,4 +214,18 @@ public class Array {
         }
         return sum;
     }
+
+    static boolean isCountOfDivideByFirstMoreThenByLast(int[] array) {
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % array[0] == 0) {
+                count++;
+            }
+            if (array[i] % array[array.length - 1] == 0) {
+                count--;
+            }
+        }
+        return (count > 0);
+    }
+
 }

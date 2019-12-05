@@ -199,4 +199,10 @@ public class ArrayTest {
         assertEquals(Array.getSumWithEvenIndex(new Number[]{1, 2.3, 3, 4, 2.3, 5}), 1 + 3 + 2.3, 0.0001);
         assertEquals(Array.getSumWithEvenIndex(new Number[]{}), 0, 0.0001);
     }
+
+    @Test
+    public void testIsCountOfDivideByFirstMoreThenByLast() {
+        assertTrue(Array.isCountOfDivideByFirstMoreThenByLast(new int[]{2, 4, 6, 3}));
+        assertFalse(Array.isCountOfDivideByFirstMoreThenByLast(new int[]{2, 4, 6, 9, 9, 3}));
+    }
 }
