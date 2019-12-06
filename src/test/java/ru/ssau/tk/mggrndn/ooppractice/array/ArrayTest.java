@@ -211,4 +211,13 @@ public class ArrayTest {
         assertEquals(Array.getMostFrequentlyElement(new Number[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6}), 2);
         assertEquals(Array.getMostFrequentlyElement(new Number[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 1}), 1);
     }
+
+    @Test
+    public void testGetEqualsElementIndex() {
+        var arr = new Number[]{1, 2, 3, 4, 5, 6, 7};
+        for (int i = 1; i < 8; i++) {
+            assertEquals(Array.getEqualsElementIndex(arr, i), i - 1, 0.001);
+        }
+        assertEquals(Array.getEqualsElementIndex(arr, 0), -1, 0.001);
+    }
 }

@@ -248,4 +248,13 @@ public class Array {
         return arr[maxIndex];
     }
 
+    static int getEqualsElementIndex(Number[] arr, Number found) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals(found)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
 }
