@@ -205,4 +205,10 @@ public class ArrayTest {
         assertTrue(Array.isCountOfDivideByFirstMoreThenByLast(new int[]{2, 4, 6, 3}));
         assertFalse(Array.isCountOfDivideByFirstMoreThenByLast(new int[]{2, 4, 6, 9, 9, 3}));
     }
+
+    @Test
+    public void testGetMostFrequentlyElement() {
+        assertEquals(Array.getMostFrequentlyElement(new Number[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6}), 2);
+        assertEquals(Array.getMostFrequentlyElement(new Number[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 1}), 1);
+    }
 }

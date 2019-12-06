@@ -228,4 +228,24 @@ public class Array {
         return (count > 0);
     }
 
+    static Number getMostFrequentlyElement(Number[] arr) {
+        int[] count = new int[arr.length];
+        int max = 0;
+        int maxIndex = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i].equals(arr[j])) {
+                    count[j]++;
+                }
+            }
+        }
+        for (int j = 0; j < arr.length; j++) {
+            if (max < count[j]) {
+                max = count[j];
+                maxIndex = j;
+            }
+        }
+        return arr[maxIndex];
+    }
+
 }
