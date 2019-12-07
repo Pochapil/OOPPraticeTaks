@@ -232,4 +232,14 @@ public class ArrayTest {
         assertEquals(arr[1], 0, 0.0001);
         assertEquals(arr[8], 5, 0.0001);
     }
+
+    @Test
+    public void testApplyByteNegateToElements() {
+        int[] arr = new int[]{1, 2, 3, 4, 5, 4, 3, 2, 1};
+        int[] arr1 = new int[]{1, 2, 3, 4, 5, 4, 3, 2, 1};
+        Array.applyByteNegateToElements(arr);
+        for (int i = 0; i < arr.length; i++) {
+            assertEquals(arr[i], ~arr1[i], 0.0001);
+        }
+    }
 }
