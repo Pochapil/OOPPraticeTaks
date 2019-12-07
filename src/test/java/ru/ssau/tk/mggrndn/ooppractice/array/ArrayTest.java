@@ -241,5 +241,9 @@ public class ArrayTest {
         for (int i = 0; i < arr.length; i++) {
             assertEquals(arr[i], ~arr1[i], 0.0001);
         }
+        Array.applyByteNegateToElements(arr);
+        for (int i = 0; i < arr.length; i++) {
+            assertEquals(arr[i], arr1[i], 0.0001);
+        }
     }
 }
