@@ -220,4 +220,16 @@ public class ArrayTest {
         }
         assertEquals(Array.getEqualsElementIndex(arr, 0), -1, 0.001);
     }
+
+    @Test
+    public void testSwapMinAndMax() {
+        double[] arr = new double[]{1, 2, 3, 4, 5, 4, 3, 2, 1};
+        Array.swapMinAndMax(arr);
+        assertEquals(arr[0], 5, 0.0001);
+        assertEquals(arr[4], 1, 0.0001);
+        arr = new double[]{1, 5, 3, 4, 5, 4, 3, 2, 0};
+        Array.swapMinAndMax(arr);
+        assertEquals(arr[1], 0, 0.0001);
+        assertEquals(arr[8], 5, 0.0001);
+    }
 }
