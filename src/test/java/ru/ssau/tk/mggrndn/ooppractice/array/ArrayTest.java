@@ -256,4 +256,15 @@ public class ArrayTest {
         }
     }
 
+    @Test
+    public void testGetArrayPairSum() {
+        int[] arr = Array.getArrayPairSum(new int[]{1, 2, 3, 4});
+        assertEquals(arr[0], 1 + 2, 0.0001);
+        assertEquals(arr[1], 3 + 4, 0.0001);
+        arr = Array.getArrayPairSum(new int[]{1, 2, 3, 4, 5});
+        assertEquals(arr[0], 1 + 2, 0.0001);
+        assertEquals(arr[1], 3 + 4, 0.0001);
+        assertEquals(arr[2], 5 + 0, 0.0001);
+    }
+
 }

@@ -291,4 +291,17 @@ public class Array {
         return result;
     }
 
+    static int[] getArrayPairSum(int[] arr) {
+        int[] result = new int[(arr.length / 2) + arr.length % 2];
+        int j = 0;
+        for (int i = 0; i < result.length; i++) {
+            if (j < arr.length - 1) {
+                result[i] = arr[j++] + arr[j++];
+            } else {
+                result[i] = arr[j];
+            }
+        }
+        return result;
+    }
+
 }
