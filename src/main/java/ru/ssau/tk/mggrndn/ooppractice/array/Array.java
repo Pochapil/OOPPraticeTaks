@@ -277,10 +277,18 @@ public class Array {
         arr[indexMax] = buffer;
     }
 
-    static void applyByteNegateToElements(int[] arr){
-       for(int i=0;i<arr.length;i++){
-           arr[i]=~arr[i];
-       }
+    static void applyByteNegateToElements(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = ~arr[i];
+        }
+    }
+
+    static int[] getNegateArray(int[] arr) {
+        int[] result = new int[arr.length];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = ~arr[i];
+        }
+        return result;
     }
 
 }

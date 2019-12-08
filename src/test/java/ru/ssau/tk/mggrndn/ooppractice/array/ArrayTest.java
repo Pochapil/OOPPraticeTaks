@@ -246,4 +246,14 @@ public class ArrayTest {
             assertEquals(arr[i], arr1[i], 0.0001);
         }
     }
+
+    @Test
+    public void testGetNegateArray() {
+        int[] arr = new int[]{1, 2, 3, 4};
+        int[] result = Array.getNegateArray(arr);
+        for (int i = 0; i < arr.length; i++) {
+            assertEquals(arr[i] + result[i], -1, 0.0001);
+        }
+    }
+
 }
