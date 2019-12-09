@@ -267,4 +267,14 @@ public class ArrayTest {
         assertEquals(arr[2], 5 + 0, 0.0001);
     }
 
+    @Test
+    public void testGetArrayElementIsEven() {
+        boolean[] result = Array.getArrayElementIsEven(new int[]{1, 2, 3, 4, 5, 6});
+        assertFalse(result[0]);
+        assertTrue(result[1]);
+        assertFalse(result[2]);
+        assertTrue(result[3]);
+        assertFalse(result[4]);
+        assertTrue(result[5]);
+    }
 }

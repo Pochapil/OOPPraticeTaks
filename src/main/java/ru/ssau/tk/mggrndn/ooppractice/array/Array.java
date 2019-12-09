@@ -304,4 +304,12 @@ public class Array {
         return result;
     }
 
+    static boolean[] getArrayElementIsEven(int[] arr) {
+        boolean[] result = new boolean[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            result[i] = arr[i] % 2 == 0;
+        }
+        return result;
+    }
+
 }
