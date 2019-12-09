@@ -277,4 +277,26 @@ public class ArrayTest {
         assertFalse(result[4]);
         assertTrue(result[5]);
     }
+
+    @Test
+    public void testGetArrayPartsOfLong() {
+        long[] arr = new long[]{1, 2, 3, 4, 5};
+        int[] result = Array.getArrayPartsOfLong(arr);
+        for (int i = 0; i < arr.length; i++) {
+            assertEquals(result[2 * i], 0, 0.001);
+            assertEquals(result[2 * i + 1], arr[i], 0.001);
+        }
+        arr = new long[]{42949672962L};
+        result = Array.getArrayPartsOfLong(arr);
+        assertEquals(result[0], 10, 0.001);
+        assertEquals(result[1], 2, 0.001);
+    }
+
+    @Test
+    public void testGetLongFromTwoInts() {
+        long number = Array.getLongFromTwoInts(10, 2);
+        long[] arr = new long[]{number, 1};
+        assertEquals(Array.getArrayPartsOfLong(arr)[0], 10, 0.001);
+        assertEquals(Array.getArrayPartsOfLong(arr)[1], 2, 0.001);
+    }
 }

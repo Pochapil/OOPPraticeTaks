@@ -312,4 +312,17 @@ public class Array {
         return result;
     }
 
+    static int[] getArrayPartsOfLong(long[] arr) {
+        int[] result = new int[arr.length * 2];
+        for (int i = 0; i < arr.length; i++) {
+            result[2 * i] = (int) (arr[i] >> 32);
+            result[2 * i + 1] = (int) arr[i];
+        }
+        return result;
+    }
+
+    static long getLongFromTwoInts(int first, int second) {
+        return (((long) first) << 32 | second);
+    }
+
 }
