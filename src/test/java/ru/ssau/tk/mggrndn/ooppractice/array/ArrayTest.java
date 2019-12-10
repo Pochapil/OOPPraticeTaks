@@ -299,4 +299,24 @@ public class ArrayTest {
         assertEquals(Array.getArrayPartsOfLong(arr)[0], 10, 0.001);
         assertEquals(Array.getArrayPartsOfLong(arr)[1], 2, 0.001);
     }
+
+    @Test
+    public void testGetArraySequence() {
+        int[] arr = Array.getArraySequence(6, 2);
+        assertEquals(arr[0], 2, 0.0001);
+        assertEquals(arr[1], 3, 0.0001);
+        assertEquals(arr[2], 4, 0.0001);
+        assertEquals(arr[3], 5, 0.0001);
+        assertEquals(arr[4], 6, 0.0001);
+        assertEquals(arr[5], 1, 0.0001);
+        arr = Array.getArraySequence(5, 3);
+        assertEquals(arr[0], 3, 0.0001);
+        assertEquals(arr[1], 4, 0.0001);
+        assertEquals(arr[2], 5, 0.0001);
+        assertEquals(arr[3], 1, 0.0001);
+        assertEquals(arr[4], 2, 0.0001);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
 }

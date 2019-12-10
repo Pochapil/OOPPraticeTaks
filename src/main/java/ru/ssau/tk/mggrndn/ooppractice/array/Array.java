@@ -325,4 +325,16 @@ public class Array {
         return (((long) first) << 32 | second);
     }
 
+    static int[] getArraySequence(int length, int start) {
+        int[] result = new int[length];
+        int j = start;
+        for (int i = 0; i < length; i++) {
+            result[i] = j++;
+            if (j == length + 1 && (length - i) % start == 0) {
+                j = 1;
+            }
+        }
+        return result;
+    }
+
 }
