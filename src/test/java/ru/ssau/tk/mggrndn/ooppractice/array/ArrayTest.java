@@ -319,4 +319,29 @@ public class ArrayTest {
             System.out.println(arr[i]);
         }
     }
+
+    @Test
+    public void testGetMultipleArray() {
+        int dim = 3;
+        int[][] arr = Array.getMultipleArray(dim);
+        int k = 1;
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+                assertEquals(arr[i][j], k++, 0.001);
+            }
+            System.out.println();
+        }
+        dim = 5;
+        k = 1;
+        arr = Array.getMultipleArray(dim);
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+                assertEquals(arr[i][j], k++, 0.001);
+            }
+            System.out.println();
+        }
+    }
+
 }

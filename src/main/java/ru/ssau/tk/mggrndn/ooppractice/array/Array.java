@@ -337,4 +337,16 @@ public class Array {
         return result;
     }
 
+    static int[][] getMultipleArray(int dim) {
+        int element = 1;
+        int[][] result = new int[dim][];
+        for (int i = 0; i < dim; i++) {
+            result[i] = new int[dim - i];
+            for (int j = 0; j < dim - i; j++) {
+                result[i][j] = element++;
+            }
+        }
+        return result;
+    }
+
 }
