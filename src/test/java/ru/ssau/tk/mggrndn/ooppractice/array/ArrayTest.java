@@ -344,4 +344,17 @@ public class ArrayTest {
         }
     }
 
+    @Test
+    public void testSortArrayNotContainsNaN() {
+        Double[] arr = new Double[]{1.2, 3.2, Double.NaN, 2.1};
+        Array.sortArrayNotContainsNaN(arr);
+        assertEquals(arr[0], 1.2, 0.0001);
+        assertEquals(arr[1], 3.2, 0.0001);
+        arr = new Double[]{1.2, 3.2, 5.4, 2.1};
+        Array.sortArrayNotContainsNaN(arr);
+        for (int i = 0; i < arr.length - 1; i++) {
+            assertTrue(arr[i] < arr[i + 1]);
+        }
+    }
+
 }

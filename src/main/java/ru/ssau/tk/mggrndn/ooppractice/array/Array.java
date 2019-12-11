@@ -1,5 +1,7 @@
 package ru.ssau.tk.mggrndn.ooppractice.array;
 
+import java.util.Arrays;
+
 public class Array {
     static double[] createArray(int length) {
         double[] array = new double[length];
@@ -347,6 +349,15 @@ public class Array {
             }
         }
         return result;
+    }
+
+    static void sortArrayNotContainsNaN(Double[] arr) {
+        for (Double number : arr) {
+            if (number.isNaN()) {
+                return;
+            }
+        }
+        Arrays.sort(arr);
     }
 
 }
