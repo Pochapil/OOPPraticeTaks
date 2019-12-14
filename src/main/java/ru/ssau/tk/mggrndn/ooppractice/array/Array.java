@@ -360,4 +360,10 @@ public class Array {
         Arrays.sort(arr);
     }
 
+    static void printStrings(String[] arr) {
+        for (String string : arr) {
+            System.out.println(string);
+        }
+    }
+
 }

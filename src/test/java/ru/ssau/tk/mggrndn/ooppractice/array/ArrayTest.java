@@ -357,4 +357,9 @@ public class ArrayTest {
         }
     }
 
+    @Test
+    public void testPrintStrings() {
+        String[] arr = new String[]{"hello", "world", "I", "am", "Dima"};
+        Array.printStrings(arr);
+    }
 }
