@@ -366,4 +366,14 @@ public class Array {
         }
     }
 
+    static double getMultiplicationElements(double[] arr) {
+        double value = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (!(Double.isNaN(arr[i]) || arr[i] == Double.NEGATIVE_INFINITY || arr[i] == Double.POSITIVE_INFINITY || arr[i] == 0)) {
+                value *= arr[i];
+            }
+        }
+        return value;
+    }
+
 }

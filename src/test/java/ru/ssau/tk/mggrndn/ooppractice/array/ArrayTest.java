@@ -362,4 +362,13 @@ public class ArrayTest {
         String[] arr = new String[]{"hello", "world", "I", "am", "Dima"};
         Array.printStrings(arr);
     }
+
+
+    @Test
+    public void testGetMultiplicationElements() {
+        double[] arr = new double[]{1, 2, 3, 4, 0, Double.NEGATIVE_INFINITY, 5, 6, Double.POSITIVE_INFINITY};
+        assertEquals(Array.getMultiplicationElements(arr), 1 * 2 * 3 * 4 * 5 * 6, 0.0001);
+        arr = new double[]{9, 2, 3, 4, 0, Double.NEGATIVE_INFINITY, 5, 6, Double.POSITIVE_INFINITY};
+        assertEquals(Array.getMultiplicationElements(arr), 9 * 2 * 3 * 4 * 5 * 6, 0.0001);
+    }
 }
